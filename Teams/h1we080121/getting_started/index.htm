@@ -4,69 +4,14 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
   </head>
   <body>
 
-    <div id="mydiv"></div>
+    <div id="root"></div>
 
     <script type="text/babel">
-
-
-      const GreetingWithJSX = () => {
-        return <h1>Hello World!</h1>;
-      }
-
-      const GreetingWithoutJSX = () => {
-        return React.createElement('h1', {}, 'I do not use JSX!');
-      }
-
-      const JSXElements = () => {
-        let strMessage = 'JSX kan assignes til konstanter og variabler';
-        const element = <h1>{strMessage}</h1>
-        return element;
-      }
-
-      const JSXExpressions = () => {
-        return <h1>React er {5 + 5} gange bedre med JSX</h1>;
-      }
-
-      const JSXLargeHTMLBlock = () => {
-        return (
-          <ul>
-            <li>Æble</li>
-            <li>Pære</li>
-            <li>Banan</li>
-            <li>Appelsin</li>
-          </ul>
-        )
-      }
-
-      const JSXWithOneTopLevelElement = () => {
-        return (
-          <div>
-            <div>Element 1</div>
-            <div>Element 2</div>  
-          </div>
-        )
-      }
-
-
-      const JSXElementsMustBeClosed = () => {
-        return (
-          <input type="text" />
-        )
-      }
-
-      const JSXElementWithClassName = () => {
-        return (
-          <h1 className="myClass">Hej Verden</h1>
-        )
-      }
-
-      ReactDOM.render(<JSXLargeHTMLBlock />, document.getElementById('mydiv'))
-
-
-
+      // Her skal du indsætte din react kode
 
     </script>
 
