@@ -12,7 +12,7 @@
 
     <script type="text/babel">
       	// Her skal du indsætte din react kode
-		const Example = () => {
+		const JSXExample = () => {
 			return (
 				<h1>Hej verden</h1>
 			)
@@ -24,10 +24,18 @@
 			)
 		}
 
+		const App = () => {
+			return (
+				<>
+					<JSXExample />
+					<JSXWithExpression />
+				</>
+			)
+		}
 		
 
 		ReactDOM.render(
-			<JSXWithExpression />,
+			<App />,
 			document.getElementById('root')
 		)
     </script>
