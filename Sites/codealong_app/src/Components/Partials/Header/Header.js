@@ -3,7 +3,8 @@ import styles from './Header.module.scss'
 
 const navItems = [
 	{ name: 'Forside', path: '/' },
-	{ name: 'Om os', path: '/about' }
+	{ name: 'Om os', path: '/about' },
+	{ name: 'Galleri', path: '/gallery' }
 ]
 
 export const Header = (props) => {
