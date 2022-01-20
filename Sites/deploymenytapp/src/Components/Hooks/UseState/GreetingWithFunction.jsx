@@ -19,7 +19,7 @@ export const GreetingWithFunction = () => {
 			<div className='formwrapper'>
 				<div>
 					Skriv dit navn i feltet og tryk Send:<br />
-					<form>
+					<form method="POST">
 						<div>
 							<label htmlFor='name'>Navn</label>
 							<input type="text" name="name" id="name"></input>
