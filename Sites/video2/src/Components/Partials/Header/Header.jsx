@@ -4,7 +4,9 @@ import styles from './Header.module.scss'
 const navItems = [
 	{ name: 'Forside', path: '/' },
 	{ name: 'Om os', path: '/about' },
-	{ name: 'Galleri', path: '/gallery' }
+	{ name: 'Galleri', path: '/gallery' },
+	{ name: 'Hilsner', path: '/greeting' },
+	{ name: 'Timer', path: '/timer' }
 ]
 
 export const Header = (props) => {

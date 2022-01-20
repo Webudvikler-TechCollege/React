@@ -1,0 +1,25 @@
+@import '../../../Assets/scss/Helpers.scss';
+
+.navbar {
+	background-color: black;
+
+	ul {
+		@include reset;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+
+			a {
+				display: block;
+				color: white;
+				text-decoration: none;
+				padding: 5px 10px;
+				&:hover {
+					background-color: white;
+					color: black;
+				}
+			}
+		}
+	}
+}

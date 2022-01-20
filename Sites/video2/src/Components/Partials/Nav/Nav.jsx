@@ -2,7 +2,6 @@ import styles from './Nav.module.scss'
 import { NavLink } from 'react-router-dom'
 
 export const Nav = props => {
-	console.log(props);
 	return (
 		<nav className={styles.navbar}>
 			<ul>

@@ -7,7 +7,7 @@ import { Home } from './Components/Pages/Home/Home'
 import { About } from './Components/Pages/About/About'
 import { Gallery } from './Components/Gallery/Gallery';
 import { Greeting } from './Components/Pages/Greetings/Greetings';
-import { Counter } from './Components/Pages/Greetings/Greetings';
+import { Timer } from './Components/Pages/Timer/Timer';
 
 const arrImages = [
     /*
@@ -35,11 +35,12 @@ function App() {
       <Router>
         <Header />
         <Main>
-          <Counter />
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery imageList={arrImages} />} />
+            <Route path="/greeting" element={<Greeting />} />
+            <Route path="/timer" element={<Timer />} />
           </Routes>
         </Main>
         <Footer />
