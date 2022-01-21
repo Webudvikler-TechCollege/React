@@ -8,6 +8,8 @@ import { About } from './Components/Pages/About/About'
 import { Gallery } from './Components/Gallery/Gallery';
 import { Greetings } from './Components/Pages/Greetings/Greetings';
 import { Timer } from './Components/Timer/Timer';
+import { GoalList } from './Components/Pages/Goals/GoalList';
+import { GoalDetails } from './Components/Pages/Goals/GoalDetails';
 
 const arrImages = [
     /*
@@ -38,6 +40,8 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<Timer />} />
+            <Route path="/goals" element={<GoalList />} />
+            <Route path="/goals/:goal_id" element={<GoalDetails />} />
             <Route path="/gallery" element={<Gallery imageList={arrImages} />} />
           </Routes>
         </Main>
