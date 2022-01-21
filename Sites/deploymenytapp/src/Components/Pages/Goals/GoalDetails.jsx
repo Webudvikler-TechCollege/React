@@ -6,20 +6,21 @@ export const GoalDetails = () => {
 	const [goal, setGoal] = useState([])
 	const { goal_id } = useParams();
 
-	const getData = async () => {
-		const url = `https://api.mediehuset.net/sdg/goals/${goal_id}`
-		try {
-			const result = await axios.get(url)
-			setGoal(result.data.item)
-		}
-		catch(err){
-			console.error(err)
-		}
-	}
 
 	useEffect(() => {
-		getData()	
-	}, [setGoal])
+		const getData = async () => {
+			const url = `https://api.mediehuset.net/sdg/goals/${goal_id}`
+			try {
+				const result = await axios.get(url)
+				setGoal(result.data.item)
+			}
+			catch(err){
+				console.error(err)
+			}
+		}
+
+		getData();
+	}, [goal_id])
 
 	return (
 		<>
