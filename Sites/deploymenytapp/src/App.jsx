@@ -8,6 +8,7 @@ import { GoalList } from './Components/Pages/Goals/GoalList';
 import { GoalDetails } from './Components/Pages/Goals/GoalDetails';
 import { Timer } from './Components/Hooks/UseEffects/Timer';
 import { ThreeCounts } from './Components/Hooks/UseEffects/ThreeCounts';
+import { PropDrilling } from './Components/Hooks/UseContext/PropDrilling';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/timer" element={<Timer />} />
             <Route path="/threecounts" element={<ThreeCounts />} />
             <Route path="/about" element={<About />} />
+            <Route path="/context" element={<PropDrilling />} />
             <Route path="/goals">
               <Route index element={<GoalList />} />
               <Route path=":goal_id" element={<GoalDetails />} />
