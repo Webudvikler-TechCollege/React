@@ -1,0 +1,32 @@
+.productGrid{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 65%;
+    vertical-align: top;
+    margin-left: 5%;
+    div{
+        display: grid;
+        height: 45vh;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        img{
+            width: 260px;
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        h3{
+            font-size: 1rem;
+        }
+        a{
+            button{
+                background-color: white;
+                border: solid 1px black;
+                width: 140px;
+                height:35px;
+            }
+        }
+    }
+}

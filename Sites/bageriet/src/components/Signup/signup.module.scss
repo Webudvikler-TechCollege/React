@@ -1,0 +1,37 @@
+@import '../../styles/theme.scss';
+.signUp {
+
+    background-image: url('../../assets/newsletterbg.jpg');
+    background-size: cover;
+    height: 40vh;
+    margin: auto;
+    div{
+        padding-top: 7%;
+        display: grid;
+        align-items: center;
+        width: 50%;
+        text-align: start;
+        margin:auto;
+        h2{
+            font-family: $main-font;
+            font-size: 2em;
+            margin:0;
+        }
+    }
+
+    form{
+        input{
+            display: inline-block;
+            height: 40px;
+            width: 80%;
+        }
+        button{
+            display: inline-block;
+            height: 46px;
+            width: 15%;
+            padding:0;
+        }
+    }
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
