@@ -1,19 +1,32 @@
-import { NavLink } from 'react-router-dom'
 import styles from './Nav.module.scss'
+import { NavLink } from 'react-router-dom'
+import arrNavItems from '../../../Assets/data/arrNavItems'
 
-export const Nav = (props) => {
+export const Nav = () => {
 	return (
 		<nav className={styles.navbar}>
 			<ul>
-				<li><NavLink to="/">Forside</NavLink></li>
-				<li><NavLink to="/about">Om</NavLink></li>
-				<li><NavLink to="/context">PropDrilling</NavLink></li>
-				<li><NavLink to="/goals">17 mål</NavLink></li>
-				<li><NavLink to="/timer">Timer</NavLink></li>
-				<li><NavLink to="/threecounts">3 tællere</NavLink></li>
-				<li><NavLink to="/products">Produkter</NavLink></li>
-				<li><NavLink to="/jobs">Ledige stillinger</NavLink></li>
-				<li><NavLink to="/contact">Kontakt</NavLink></li>
+				{arrNavItems.map((item, key) => {
+					return (
+						item.display ?
+							<li key={key}>
+								<NavLink to={item.path}>{item.title}</NavLink>
+								{(item.subnav) ?
+									<ul>
+										{item.subnav?.map((subitem, subkey) => {
+											const path = (subkey) ? `${item.path}/${subitem.path}` : item.path
+											return (
+												<li key={subkey}>
+													<NavLink to={path}>{subitem.title}</NavLink>
+												</li>
+											)
+										})}
+									</ul> 
+								: null}
+							</li>
+							: null
+					)
+				})}
 			</ul>
 		</nav>
 	)
