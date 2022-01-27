@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$color-bg: #fafafa;
+$color-dark: #333;
+$color-light: #fff;
+$color-blue: #617685;
+$color-darkblue: #59758d;
+
+body {
+  margin: 0;
+  font-family: 'Open Sans';
+  font-size: 0.8rem;
+  color: $color-dark;
+  background-color: $color-bg;
+}
+
+header {
+  text-align: center;
+  overflow-y: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+h1 {
+  font-family: 'Lobster';
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: 'Lobster';
+  font-size: 2.0rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+
+  
+  figure {
+    position: relative;
+    top: 45px;
+  }
+
+  > section {
+    background-color: $color-dark;
+    height: 200px;
+    padding-top: 30px;
+    color: $color-light;
+  }
+
+  h2 {
+    color: $color-light;
+  }
+}
+
+form {
+  div {
+    padding: 1px;
+  }
+
+  input, textarea  {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    width: 100%;
+    border: solid 1px #ddd;
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .buttonpanel {
+    overflow-y: auto;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background-color: $color-darkblue;
+    border: 0px none;
+    color: $color-light;
+    font-size: 0.7rem;
+    padding: 10px;
+    margin-left: 3px;
+    margin-top: 1px;
+    float: right;
+    clear: left;
+  }
+}

@@ -1,0 +1,24 @@
+.wrapper {
+    grid-template-columns: 6fr 6fr;
+
+    figure {
+        padding: 0px;
+        margin: 0px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.form {
+    padding-right: 20px;
+
+    input, textarea {
+        width: 100%;
+    }
+
+    button {
+        float: right;
+    }
+}
+

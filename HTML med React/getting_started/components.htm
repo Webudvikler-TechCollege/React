@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+
+
+      const Greeting = (props) => {
+        return <h1>Hej {props.name}</h1>;
+      }
+
+      const FavoriteDishes = (props) => {
+          return (      
+            <ul>    
+            {props.data.map((dish, key) => {
+              return (
+                <Dish key={key} name={dish} />
+              )
+            })}
+            </ul>
+          )
+      }
+
+      const arrDishes = [
+        'Spaghetti',
+        'Burger',
+        'Hakkebøf'
+      ]
+
+      const Dish = (props) => {
+        return (
+          <li>{props.name}</li>
+        )
+      }
+
+      ReactDOM.render(
+        <FavoriteDishes data={arrDishes} />, 
+        document.getElementById('mydiv')
+      )
+
+    </script>
+
+  </body>
+</html>

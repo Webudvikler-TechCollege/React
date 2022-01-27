@@ -1,80 +1,76 @@
-// Både GET og POST i en funktion med variabler
-
-export async function doFetch(url, type, data, key) {
-
-    let method = type || 'GET'
-    let body = data || null
+export async function doFetch(url, method = 'get', data = null) {
 
     const options = {
-        method : method,
-        body : body
-      }
+        method: method,
+        body: data
+    }
 
     try {
-      const response = await fetch(url, options)
-      const data = await response.json()
-      return data
+        const response = await fetch(url, options)
+        const data = await response.json()
+        return data
     }
-    catch (error) {
-      console.log(error)
+    catch(error) {
+        console.error(error);
     }
-  }
+}
 
-// Alternativ metode med to forskellige fetch funktioner
-// Bruger authentication token som key
-
-  export async function getAuthData(url, key) {
+export async function getAuthData(url, key) {
 
     const options = {
-      method : 'GET',
-      headers: {
-        'Authorization': `Bearer ${key}`, 
-      }, 
-  }
+        method: 'GET',
+        headers: {
+            'Authorization' : `Baerer ${key}`
+        }
+    }
 
     try {
-      const response = await fetch(url, options)
-      const data = await response.json()
-      return data
+        const response = await fetch(url, options)
+        const data = await response.json()
+        return data
     }
-    catch (error) {
-      console.log(error)
+    catch(error) {
+        console.error(error);
     }
-  }
+}
 
-  export async function postAuthData(url, key, data) {
+export async function postAuthData(url, key, formdata) {
+
+    console.log(formdata);
 
     const options = {
-      method : 'POST',
-      body : data,
-      headers: {
-        'Authorization': `Bearer ${key}`, 
-      }, 
-  }
-    try {
-      const response = await fetch(url, options)
-      const data = await response.json()
-      return data
+        method: 'POST',
+        body: formdata,
+        headers: {
+            'Authorization' : `Baerer ${key}`
+        }
     }
-    catch (error) {
-      console.log(error)
-    }
-  }
 
-  export async function deleteAuthData(url, key) {
+    try {
+        const response = await fetch(url, options)
+        const data = await response.json()
+        return data
+    }
+    catch(error) {
+        console.error(error);
+    }
+}
+
+export async function deleteAuthData(url, key) {
 
     const options = {
-      method : 'DELETE',
-      headers: {
-        'Authorization': `Bearer ${key}`, 
-      }, 
-  }
+        method: 'DELETE',
+        headers: {
+            'Authorization' : `Baerer ${key}`
+        }
+    }
+
     try {
-      const response = await fetch(url, options)
-      const data = await response.json()
-      return data
+        const response = await fetch(url, options)
+        const data = await response.json()
+        return data
     }
-    catch (error) {
-      console.log(error)
+    catch(error) {
+        console.error(error);
     }
-  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      class Clock extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {date: new Date()}
+        }
+
+        componentDidMount() {
+          this.timerID = setInterval(
+            () => this.tick(),
+            1000
+          )
+        }
+
+        tick() {
+          this.setState({
+            date: new Date()
+          })
+        }
+
+        render() {
+          return (
+            <div>
+              {this.state.date.toLocaleTimeString()}  
+            </div>
+          )
+        }
+      }
+
+      ReactDOM.render(<Clock />, document.getElementById('mydiv'))
+      
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+@import '../../../App.scss';
+
+.productitem {
+    box-sizing: border-box;
+
+    div:first-child {
+        width: 100%;
+        max-width: 240px;
+        height: 140px;
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .num_comments {
+        padding-top: 10px;
+        text-align: center;
+        color: #999;
+
+        img {
+            margin-left: 10px;
+        }
+    }
+
+    h4 {
+        text-transform: uppercase;
+        height: 40px;
+        margin-bottom: 5px;
+        padding: 0px;
+
+        + p {
+            margin-top: 0px;
+            height: 90px;
+        }
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: solid 1px #999;
+        padding: 5px;
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+        background-color: $color-darkblue;
+        color: $color-light;
+    }
+}
