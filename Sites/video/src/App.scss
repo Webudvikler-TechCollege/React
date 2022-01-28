@@ -1,8 +1,12 @@
 body {
 	background-color: white;
+	p {
+		color: #000 !important;
+	}
 }
 
 .active {
 	background-color: black;
 	color: white !important;
 }
+

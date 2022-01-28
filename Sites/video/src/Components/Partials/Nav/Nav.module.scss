@@ -1,25 +1,53 @@
+@import '../../../Assets/scss/helpers.scss';
+
+$bgcolor: black;
+$txcolor: white;
+$hvcolor: #333;
+
 .navbar {
-	border: solid 1px #000;
+	background-color: $bgcolor;
 
 	ul {
+		@include reset;
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
 
-		li {
-			display: inline-block;
-
-			a {
-				display: block;
-				padding: 10px 20px;
-				text-decoration: none;
-				color: #000;
-				&:hover {
-					background-color: black;
-					color: white;
-				}
-			}
+		a {
+			display: block;
+			color: $txcolor;
+			text-decoration: none;
 		}
 	}
 
+	> ul {
+
+		> li {
+			display: inline-block;
+			&:hover {
+				background-color: $hvcolor;
+				color: $txcolor;
+			}
+
+			> a {
+				padding: 5px 10px;
+			}
+
+			ul {
+				display: none;
+				background-color: $hvcolor;
+				list-style-type: none;
+
+				li {
+					a {
+						padding: 10px
+					}
+				}
+			}
+
+			&:hover ul {
+				display: block;
+				position: absolute
+			}
+
+		}
+	}
 }

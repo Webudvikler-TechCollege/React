@@ -32,10 +32,7 @@ export const LoginForm = () => {
 	const [message, setMessage] = useState('')
 
 	const submitLogin = async data => {
-		const formdata = new FormData()
-		formdata.append('username', data.target.form.username.value)
-		formdata.append('password', data.target.form.password.value)
-
+		const formdata = new FormData(data.target.form)
 		const url = "https://api.mediehuset.net/token"
 		const result = await axios.post(url, formdata)
 		console.log(result);
