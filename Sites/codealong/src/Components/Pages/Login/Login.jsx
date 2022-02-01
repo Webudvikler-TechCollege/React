@@ -1,10 +1,11 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { AuthContext } from '../../Context/AuthProvider';
 
 export const Login = () => {
 	const txMessage = "Indtast brugernavn og adgangskode for at logge ind"
 	const [message, setMessage] = useState(txMessage);
-	const [loginData, setLoginData] = useState('')
+	const {loginData, setLoginData} = useContext(AuthContext)
 
 	const SubmitLoginForm = async e => {
 		const formData = new FormData(e.target.form)
