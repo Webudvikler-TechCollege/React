@@ -11,6 +11,7 @@ import { GreetingOnInput } from '../../Components/Hooks/UseState/GreetingOnInput
 import { Counter } from '../../Components/Hooks/UseState/Counter';
 import { GreetingOnSubmit } from '../../Components/Hooks/UseState/GreetingOnSubmit';
 import { GreetingWithFunction } from '../../Components/Hooks/UseState/GreetingWithFunction';
+import { Products } from '../../Components/Pages/Products/Products';
 
 const arrNavItems = [
 	{
@@ -24,6 +25,18 @@ const arrNavItems = [
 		path: '/about',
 		element: <About />,
 		display: true
+	},	
+	{
+		title: 'Produkter',
+		path: '/products',
+		element: <Products />,
+		display: true
+	},
+	{
+		title: 'Produkt Liste',
+		path: '/:id',
+		element: <Products />,
+		display: false
 	},
 	{
 		title: 'Hooks',
