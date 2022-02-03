@@ -7,11 +7,11 @@ import { Route, Link, useParams, useNavigate, Outlet } from "react-router-dom"
 export const Products = () => {
 	return (
 		<div className="container">
+			<CategoryList />
 			<Outlet />
 		</div>
 	)
 }
-
 
 export const CategoryList = () => {
 	const [categories, setCategories] = useState([])
@@ -38,7 +38,7 @@ export const CategoryList = () => {
 
 export const ProductList = () => {
 	const [productlist, setProductList] = useState([])
-	const {cat_id} = useParams()
+	const { cat_id } = useParams()
 
 	useEffect(() => {
 		const getProducts = async () => {
@@ -64,18 +64,25 @@ export const ProductList = () => {
 
 export const ProductDetails = () => {
 	const [product, setProduct] = useState({})
-	const {id} = useParams()
+	const { id } = useParams()
 
 	useEffect(() => {
 		const getProductData = async () => {
 			const result = await axios.get(`https://api.mediehuset.net/bakeonline/products/${id}`);
 			setProduct(result.data.item);
 		}
+		getProductData()
 	}, [id])
 
 	return (
 		<section className="productdetails">
-			{product.title}
+			<article>
+				<h1>{product.title}</h1>
+				<figure>
+					<img src={product.image?.fullpath} alt="" />
+				</figure>
+				<p>{product.description}</p>
+			</article>
 		</section>
 	)
 }

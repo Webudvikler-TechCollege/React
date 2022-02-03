@@ -17,7 +17,7 @@ export const AppRouter = () => {
 		<Routes>
 			<Route index element={<Home />} />
 			<Route path="/about" element={<About />} />
-			<Route path="/products" element={<CategoryList />}>
+			<Route path="/products" element={<Products />}>
 				<Route index element={<Redirect to="/products/1" />}></Route>
 				<Route path=":cat_id">
 					<Route index element={<ProductList />} />
