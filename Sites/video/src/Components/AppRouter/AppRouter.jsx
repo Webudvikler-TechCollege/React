@@ -1,39 +1,29 @@
-import { Routes, Route } from 'react-router-dom'
-import arrNavItems from '../../Assets/data/arrNavItems'
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import {Home} from '../Pages/Home/Home'
+import {About} from '../Pages/About/About'
+import { ProductDetails, ProductList, Products } from '../Pages/Products/Products'
+import { useEffect } from 'react'
+
+const Redirect = ({ to }) => {
+	let navigate = useNavigate();
+	useEffect(() => {
+		navigate(to);
+	});
+	return null;
+}
 
 export const AppRouter = () => {
 	return (
 		<Routes>
-			{arrNavItems.map((item, key) => {
-				return (
-					item.subnav ?
-						<Route
-							key={key}
-							path={item.path}
-						>
-							{item.subnav?.map((subitem, subkey) => {
-								return (
-									(!subkey) ?
-										<Route
-											key={subkey}
-											index
-											element={subitem.element}
-										/> :
-										<Route
-											key={subkey}
-											path={subitem.path}
-											element={subitem.element}
-										/>
-								)
-							})}
-						</Route> :
-						<Route
-							key={key}
-							path={item.path}
-							element={item.element}
-						/>
-				)
-			})}
+			<Route index element={<Home />} />
+			<Route path="/about" element={<About />} />
+			<Route path="/products" element={<Products />}>
+				<Route index element={<Redirect to='/products/1' />}></Route>
+				<Route path=":category_id">
+					<Route index element={<ProductList />}></Route>
+					<Route path=":product_id" element={<ProductDetails />}></Route>
+				</Route>
+			</Route>
 		</Routes>
 	)
 }

@@ -3,6 +3,8 @@ import { Home } from '../Pages/Home/Home'
 import { About } from '../Pages/About/About'
 import { CategoryList, ProductDetails, ProductList, Products } from '../Pages/Products/Products'
 import { useEffect } from 'react'
+import { GreetingOnSubmit } from '../Hooks/UseState/GreetingOnSubmit'
+import { Login } from '../Pages/Login/Login'
 
 const Redirect = ({ to }) => {
 	let navigate = useNavigate();
@@ -24,6 +26,7 @@ export const AppRouter = () => {
 					<Route path=":id" element={<ProductDetails />} />
 				</Route>
 			</Route>
+			<Route path="/login" element={<Login />} />
 		</Routes>
 	)
 }

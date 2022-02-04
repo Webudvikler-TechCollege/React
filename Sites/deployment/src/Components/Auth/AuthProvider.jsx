@@ -1,15 +1,15 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
-	const [ loginData, setLoginData ] = useState('')
+	const [loginData, setLoginData] = useState('')
 
 	useEffect(() => {
-		sessionStorage.getItem('token') ?
-			setLoginData(JSON.parse(sessionStorage.getItem('token'))) : null
-
-	}, [])
+		if(sessionStorage.getItem('token')) {
+			setLoginData(JSON.parse(sessionStorage.getItem('token')))
+		}
+	}, [children])
 
 	return (
 		<AuthContext.Provider value={{loginData, setLoginData}}>
@@ -17,3 +17,5 @@ const AuthProvider = ({children}) => {
 		</AuthContext.Provider>
 	)
 }
+
+export { AuthContext, AuthProvider }

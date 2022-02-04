@@ -4,18 +4,22 @@ import { Header } from './Components/Partials/Header/Header'
 import { Main } from './Components/Partials/Main/Main'
 import { Footer } from './Components/Partials/Footer/Footer'
 import { AppRouter } from './Components/AppRouter/AppRouter';
+import { AuthProvider } from './Components/Auth/AuthProvider';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Main>
-          <AppRouter />
-        </Main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Main>
+            <AppRouter />
+          </Main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 export default App;

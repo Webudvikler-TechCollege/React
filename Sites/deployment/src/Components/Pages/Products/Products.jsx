@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
-import { Route, Link, useParams, useNavigate, Outlet } from "react-router-dom"
+import { Link, useParams, Outlet } from "react-router-dom"
+import { Comments } from "./Comments"
 
 
 
@@ -51,7 +52,6 @@ export const ProductList = () => {
 	return (
 		<ul className="productlist">
 			{productlist && productlist.map(product => {
-				console.log(product);
 				return (
 					<li key={product.id}>
 						<Link to={`/products/${cat_id}/${product.id}`}>{product.title}</Link>
@@ -83,6 +83,7 @@ export const ProductDetails = () => {
 				</figure>
 				<p>{product.description}</p>
 			</article>
+			<Comments />
 		</section>
 	)
 }

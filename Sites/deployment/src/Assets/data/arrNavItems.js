@@ -6,7 +6,7 @@ import { Timer } from '../../Components/Hooks/UseEffects/Timer';
 import { ThreeCounts } from '../../Components/Hooks/UseEffects/ThreeCounts';
 import { PropDrilling } from '../../Components/Hooks/UseContext/PropDrilling';
 import { Headers } from '../../Components/Hooks/UseContext/Headers';
-import { Login } from '../../Components/Hooks/UseContext/Login';
+import { Login } from '../../Components/Pages/Login/Login';
 import { GreetingOnInput } from '../../Components/Hooks/UseState/GreetingOnInput';
 import { Counter } from '../../Components/Hooks/UseState/Counter';
 import { GreetingOnSubmit } from '../../Components/Hooks/UseState/GreetingOnSubmit';
@@ -30,13 +30,15 @@ const arrNavItems = [
 		title: 'Produkter',
 		path: '/products',
 		element: <Products />,
-		display: true
-	},
-	{
-		title: 'Produkt Liste',
-		path: '/:id',
-		element: <Products />,
-		display: false
+		display: true,
+		outlets: [
+			{
+				title: 'Produkt Liste',
+				path: '/:id',
+				element: <Products />,
+				display: false
+			}
+		]
 	},
 	{
 		title: 'Hooks',
