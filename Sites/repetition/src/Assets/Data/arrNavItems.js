@@ -23,7 +23,12 @@ const arrNavItems = [
 				display: true
 			}						
 		]
-	}
+	},
+	{
+		title: 'Login',
+		path: '/login',
+		display: true
+	}	
 ]
 
 export default arrNavItems
