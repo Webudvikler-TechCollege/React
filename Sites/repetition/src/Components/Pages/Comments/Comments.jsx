@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Page } from "../../App/Layout/Layout";
 import { useForm } from "react-hook-form";
+import { useParams } from "react-router-dom";
 import { useAuth } from "../../App/Auth/Auth";
 import axios from "axios";
 
@@ -20,8 +21,10 @@ export const Comments = () => {
 };
 
 export const CommentList = () => {
-  const [apiData, setApiData] = useState();
   const { loginData } = useAuth();
+  const [apiData, setApiData] = useState();
+  const { id } = useParams();
+  console.log(id);
 
   useEffect(() => {
     const getData = async () => {
@@ -31,14 +34,12 @@ export const CommentList = () => {
         },
       };
 
-      const endpoint = "https://api.mediehuset.net/snippets/comments/1";
+      const endpoint = `https://api.mediehuset.net/snippets/comments/${id}`;
       const result = await axios.get(endpoint, options);
       setApiData(result.data.items.reverse());
-    };
-    if (loginData.access_token) {
-      getData();
     }
-  }, [loginData.access_token]);
+    getData();
+  }, [loginData.access_token, id]);
 
   return (
     <div>

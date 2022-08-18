@@ -28,6 +28,11 @@ const arrNavItems = [
 		title: 'Login',
 		path: '/login',
 		display: true
+	},	
+	{
+		title: 'Products',
+		path: '/products',
+		display: true
 	}	
 ]
 
