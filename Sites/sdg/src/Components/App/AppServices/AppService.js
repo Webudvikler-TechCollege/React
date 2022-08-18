@@ -1,22 +1,22 @@
-import API_URL from "./api.url";
-import authHeader from "./auth.header";
+import API_URL from "./ApiUrl";
+import AuthHeader from "./AuthHeader";
 import Axios from 'axios';
 
 const getList = endpoint => {
 	return Axios.get(`${API_URL}/${endpoint}`, {
-		headers: authHeader()
+		headers: AuthHeader()
 	})
 }
 
 const getDetails = (endpoint, id) => {
 	return Axios.get(`${API_URL}/${endpoint}/${id}`, {
-		headers: authHeader()
+		headers: AuthHeader()
 	})
 }
 
-const appService = {
+const AppService = {
 	getList,
 	getDetails
 }
 
-export { appService }
+export { AppService }

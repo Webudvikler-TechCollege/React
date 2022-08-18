@@ -1,15 +1,15 @@
 import { Page } from "../../App/Layout/Layout"
 import { useEffect, useState } from "react";
-import { getList } from '../../App/AppServices/app.service';
-import { Link } from 'react-router-dom';
+import { appService } from '../../App/AppServices/app.service';
+import { Link, Outlet } from 'react-router-dom';
 
-export const ProductList = () => {
+export const GoalList = () => {
 	const [apiData, setApiData] = useState([]);
 
 	useEffect(() => {
 		const getData = async () => {
 			try {
-				const result = await getList('goals');
+				const result = await appService.getList('goals');
 				if(result.data) {
 					setApiData(result.data.items);
 				}
@@ -23,11 +23,15 @@ export const ProductList = () => {
 
 	return (
 		<Page title="Produkter" description="Se vores skønne produkter">
+			<ul>
 			{apiData && apiData.map(goal => (
-				<div key={goal.id}>
+				<li key={goal.id}>
 					<Link to={goal.id}>{goal.title}</Link>
-				</div>
+				</li>
 			))}
+			</ul>
+			<hr />
+			<Outlet />
 		</Page>
 	)
 
