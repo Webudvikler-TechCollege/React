@@ -2,6 +2,7 @@ import { Page } from "../../App/Layout/Layout"
 import { useEffect, useState } from "react";
 import { AppService } from '../../App/AppServices/AppService';
 import { useParams } from 'react-router-dom';
+import { GoalCommentList } from "./GoalComments";
 
 export const GoalDetails = () => {
 	const [apiData, setApiData] = useState({});
@@ -26,6 +27,8 @@ export const GoalDetails = () => {
 		<Page title={apiData.title} description={apiData.description}>
 			{apiData.description}
 			<hr />
+			{/* KommentarListe */}
+			<GoalCommentList id={id} />
 		</Page>
 	)
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AppService } from "../../App/AppServices/AppService";
 import { Link } from "react-router-dom";
 
-export const GoalCommentList = (props) => {
+export const GoalCommentList = props => {
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
@@ -22,9 +22,13 @@ export const GoalCommentList = (props) => {
   return (
     <ul>
       {apiData &&
-        apiData.map((goal) => (
-          <li key={goal.id}>
-            <Link to={goal.id}>{goal.title}</Link>
+        apiData.map((comment) => (
+          <li key={comment.id}>
+            <p>
+            <b>{comment.title}</b><br />
+            {comment.comment}<br />
+            <span>Indsendt af {comment.user.firstname} d. {comment.created}</span>            
+            </p>
           </li>
         ))}
     </ul>
