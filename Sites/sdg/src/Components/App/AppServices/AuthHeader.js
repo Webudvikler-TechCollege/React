@@ -3,7 +3,6 @@ const authHeader = () => {
   const current_token = sessionStorage.getItem("token")
     ? JSON.parse(sessionStorage.getItem("token"))
     : "";
-	console.log(current_token);
 
 	// Smider token i en auth header hvis den eksisterer
 	if(current_token) {

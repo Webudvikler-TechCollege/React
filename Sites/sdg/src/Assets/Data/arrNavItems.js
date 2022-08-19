@@ -2,12 +2,14 @@ const arrNavItems = [
 	{
 		title: 'Forside',
 		path: '/',
-		display: true
+		display: true,
+		public: true
 	},	
 	{
-		title: 'Goals',
+		title: 'Goals123',
 		path: '/goals',
-		display: true
+		display: true,
+		public: false
 	},	
 	{
 		title: 'Login',

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { AppService } from '../../App/AppServices/AppService';
 import { useParams } from 'react-router-dom';
 import { GoalCommentList } from "./GoalComments";
+import { GoalCommentPost } from "./GoalCommentPost";
 
 export const GoalDetails = () => {
 	const [apiData, setApiData] = useState({});
@@ -29,6 +30,7 @@ export const GoalDetails = () => {
 			<hr />
 			{/* KommentarListe */}
 			<GoalCommentList id={id} />
+			<GoalCommentPost id={id} />
 		</Page>
 	)
 

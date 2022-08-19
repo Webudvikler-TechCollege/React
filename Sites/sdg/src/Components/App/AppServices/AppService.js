@@ -14,9 +14,16 @@ const getDetails = (endpoint, id) => {
 	})
 }
 
+const Create = (endpoint, data) => {
+	return Axios.post(`${API_URL}/${endpoint}`, data, {
+		headers: AuthHeader()
+	})
+}
+
 const AppService = {
 	getList,
-	getDetails
+	getDetails,
+	Create
 }
 
 export { AppService }

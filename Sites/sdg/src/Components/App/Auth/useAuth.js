@@ -4,6 +4,9 @@ export const useAuth = create(set => {
 	return {
 		// Getter: true hvis token er sat
 		loggedIn : Boolean(sessionStorage.getItem('token')),
+		loginInfo : () => {
+			return sessionStorage.getItem('token')
+		},
 		// 
 		setLoggedIn : (loggedIn = true) => set(() => {
 			if(!loggedIn) {

@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../../App/Auth/useAuth";
 
 export const Login = () => {
-  const { setLoggedIn } = useAuth(store => ({
-    setLoggedIn: store.setLoggedIn
+  const { loggedIn, loginInfo, setLoggedIn, setLogOut } = useAuth(store => ({
+    loggedIn: store.loggedIn,
+    loginInfo: store.loginInfo,
+    setLoggedIn: store.setLoggedIn,
+    setLogOut: store.setLogOut
   }));
 
   const {
@@ -25,10 +28,14 @@ export const Login = () => {
           "Content-Type": "application/json",
         },
       })
-      .then((response) => response.json())
-      .then(
-        (data) => sessionStorage.setItem("token", JSON.stringify(data)),
-        setLoggedIn()
+      .then(response => response.json())
+      .then(        
+        data => {
+          if(data.status === 'Ok') {
+            sessionStorage.setItem("token", JSON.stringify(data))
+            setLoggedIn()
+          }
+        }
       );
     } catch (error) {
       console.log(error);
@@ -37,6 +44,7 @@ export const Login = () => {
 
   return (
     <Page title="Login" description="Her kan du logge ind på vores site">
+      {!loggedIn && !loggedIn.username ? (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div>
             <input
@@ -73,6 +81,12 @@ export const Login = () => {
             </button>
           </div>
         </form>
+      ) : 
+        <div>
+          <p>Du er logget ind som <i>{loginInfo.username}</i></p>
+          <button onClick={setLogOut}>Log ud</button>
+        </div>
+      }
     </Page>
   );
 };

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AppService } from "../../App/AppServices/AppService";
-import { Link } from "react-router-dom";
 
 export const GoalCommentList = props => {
   const [apiData, setApiData] = useState([]);

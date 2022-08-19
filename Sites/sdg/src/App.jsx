@@ -1,5 +1,5 @@
 import { Header } from "./Components/Partials/Header";
-import { Nav } from "./Components/Partials/Nav";
+import { NavFromArray } from "./Components/Partials/NavFromArray";
 import { Main } from "./Components/Partials/Main";
 import { Footer } from "./Components/Partials/Footer";
 import "./App.scss";
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <Header></Header>
-        <Nav></Nav>
+        <NavFromArray></NavFromArray>
         <Main>
           <AppRouter />
         </Main>
