@@ -1,10 +1,10 @@
 import { Page } from "../../App/Layout/Layout";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../../Auth/useAuth";
+import { useAuth } from "../../App/Auth/useAuth";
 
 export const Login = () => {
-  const { setLoggedIn } = useAuth((store) => ({
-    setLoggedIn: store.setLoggedIn,
+  const { setLoggedIn } = useAuth(store => ({
+    setLoggedIn: store.setLoggedIn
   }));
 
   const {
