@@ -1,60 +1,52 @@
 import { Page } from "../../App/Layout/Layout";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../../App/Auth/useAuth";
+import axios from "axios";
+import { useAuth } from "../../App/Auth/Auth";
 
 export const Login = () => {
-  const { loggedIn, loginInfo, setLoggedIn, setLogOut } = useAuth(store => ({
-    loggedIn: store.loggedIn,
-    loginInfo: store.loginInfo,
-    setLoggedIn: store.setLoggedIn,
-    setLogOut: store.setLogOut
-  }));
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const { loginData, setLoginData } = useAuth();
 
-  const onSubmit = async (submitdata) => {
-    const URL = "https://api.mediehuset.net/token";
-
-    try {
-      fetch(URL, {
-        body: JSON.stringify(submitdata),
-        method: "POST",
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
-      })
-      .then(response => response.json())
-      .then(        
-        data => {
-          if(data.status === 'Ok') {
-            sessionStorage.setItem("token", JSON.stringify(data))
-            setLoggedIn()
-          }
-        }
-      );
-    } catch (error) {
-      console.log(error);
-    }
+  const sendLoginRequest = async (data, e) => {
+    e.target.reset();
+    const formData = new FormData();
+    formData.append("username", data.username);
+    formData.append("password", data.password);
+    const url = "https://api.mediehuset.net/token";
+    const result = await axios.post(url, formData);
+    handleSessionData(result);
   };
+
+  const handleSessionData = (res) => {
+    if (!res.message) {
+      setLoginData(res.data);
+      sessionStorage.setItem("token", JSON.stringify(res.data));
+    }
+  } 
+
+  const logOut = () => {
+	  sessionStorage.removeItem('token')
+	  setLoginData('')
+  }
 
   return (
     <Page title="Login" description="Her kan du logge ind på vores site">
-      {!loggedIn && !loggedIn.username ? (
-        <form onSubmit={handleSubmit(onSubmit)}>
+      {!loginData && !loginData.username ? (
+        <form onSubmit={handleSubmit(sendLoginRequest)}>
           <div>
             <input
               type="text"
               id="username"
-              placeholder="Indtast brugernavn" 
+              placeholder="Indtast brugernavn"
+              className="border-2 rounded-sm my-1"
               {...register("username", { required: true })}
             />
             {errors.username && (
-              <span>
+              <span className="text-red-600 ml">
                 Du skal udfylde dit brugernavn!
               </span>
             )}
@@ -63,30 +55,34 @@ export const Login = () => {
             <input
               type="password"
               id="password"
-              placeholder="Indtast adgangskode" 
+              placeholder="Indtast adgangskode"
+              className="border-2 rounded-sm my-1"
               {...register("password", { required: true })}
             />
             {errors.password && (
-              <span>
+              <span className="text-red-600 ml">
                 Du skal udfylde din adgangskode!
               </span>
             )}
           </div>
           <div>
-            <button type="submit">
+            <button
+              className="bg-sky-500 mr-1 py-2 px-4 rounded-md"
+              type="submit"
+            >
               Login
             </button>
-            <button type="reset">
+            <button className="bg-amber-500 py-2 px-4 rounded-md" type="reset">
               Nulstil felter
             </button>
           </div>
         </form>
       ) : 
-        <div>
-          <p>Du er logget ind som <i>{loginInfo.username}</i></p>
-          <button onClick={setLogOut}>Log ud</button>
-        </div>
-      }
+		<div>
+			<p>Du er logget ind som <i>{loginData.username}</i></p>
+			<button onClick={logOut}>Log ud</button>
+		</div>
+	  }
     </Page>
   );
 };
