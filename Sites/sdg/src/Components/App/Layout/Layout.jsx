@@ -11,9 +11,9 @@ const Page = props => {
 
 	return (
 		<>
-			<h1 className="text-xl font-bold">{props.title}</h1>
+			<h1>{props.title}</h1>
 			{props.subtitle && (
-				<h2 className="text-lg">{props.subtitle}</h2>
+				<h2>{props.subtitle}</h2>
 			)}
 			<ContentWrapper>{props.children}</ContentWrapper>
 		</>

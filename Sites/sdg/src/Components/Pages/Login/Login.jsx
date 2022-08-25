@@ -42,11 +42,10 @@ export const Login = () => {
               type="text"
               id="username"
               placeholder="Indtast brugernavn"
-              className="border-2 rounded-sm my-1"
               {...register("username", { required: true })}
             />
             {errors.username && (
-              <span className="text-red-600 ml">
+              <span>
                 Du skal udfylde dit brugernavn!
               </span>
             )}
@@ -56,25 +55,17 @@ export const Login = () => {
               type="password"
               id="password"
               placeholder="Indtast adgangskode"
-              className="border-2 rounded-sm my-1"
               {...register("password", { required: true })}
             />
             {errors.password && (
-              <span className="text-red-600 ml">
+              <span>
                 Du skal udfylde din adgangskode!
               </span>
             )}
           </div>
           <div>
-            <button
-              className="bg-sky-500 mr-1 py-2 px-4 rounded-md"
-              type="submit"
-            >
-              Login
-            </button>
-            <button className="bg-amber-500 py-2 px-4 rounded-md" type="reset">
-              Nulstil felter
-            </button>
+            <button type="submit">Login</button>
+            <button type="reset">Nulstil felter</button>
           </div>
         </form>
       ) : 
