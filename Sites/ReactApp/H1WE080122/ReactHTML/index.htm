@@ -11,32 +11,40 @@
     <div id="root"></div>
 
     <script type="text/babel">
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+
       	// Her skal du indsætte din react kode
-		const JSXExample = () => {
-			return (
-				<h1>Hej verden</h1>
-			)
+		const WriteJSX = () => {
+			return <h2>JSX er godt for maven</h2>
 		}
 
-		const JSXWithExpression = () => {
+		const Summary = () => {
+			return <h1>{10*10}</h1>
+		}
+
+		const FavoriteMeals = () => {
 			return (
-				<div>JSX er {5*2} gange bedre end HTML</div>
+				<ol>
+					<li>Ost</li>
+					<li>Spaghetti</li>
+					<li>Snegle</li>
+				</ol>
 			)
 		}
 
 		const App = () => {
 			return (
 				<>
-					<JSXExample />
-					<JSXWithExpression />
+					<WriteJSX />
+					<Summary />
+					<FavoriteMeals />
 				</>
 			)
 		}
-		
-		const root = ReactDOM.createRoot(document.getElementById("root"));
-		root.render(
-			<App />
-		)
+
+		root.render(<App />)
+
+
     </script>
 
   </body>
