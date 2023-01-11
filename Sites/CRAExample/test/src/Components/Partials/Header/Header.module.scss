@@ -1,0 +1,11 @@
+@import '../../../Assets/scss/bundles.scss';
+
+.siteheader {
+	background: $primary-color;
+	padding: 1rem;
+
+	h1 {
+		color: $secondary-color;
+		@include reset;
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+      // Her skal du indsætte din react kode
+
+      const arrStudents = [
+        { id: 1, firstname: "Tina", lastname: "Hansen" },
+        { id: 2, firstname: "Bo", lastname: "Jensen" },
+        { id: 3, firstname: "Mark", lastname: "Petersen" }
+      ]
+
+      const List = props => {
+        return (
+          <li>{`Fulde navn: ${props.fullname}`}</li>
+        )
+      }
+
+      const CompWithProps = props => {
+        console.log(props)
+        return (
+          <ul>
+          {props.students && props.students.map(item => {
+            return (
+              <List key={item.id} fullname={`${item.firstname} ${item.lastname}`} />
+            )
+          })}
+          </ul>
+        )
+      }
+
+      root.render(<CompWithProps students={arrStudents} gris="11" school="TECHCOLLEGE" />)
+
+    </script>
+
+  </body>
+</html>
