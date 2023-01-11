@@ -3,3 +3,14 @@
 body {
 	@include reset;
 }
+
+a {
+	text-decoration: none;
+	color: $primary-color;
+	&:hover {
+		color: $hvcolor
+	}
+	&.active {
+		color: $hvcolor
+	}
+}
