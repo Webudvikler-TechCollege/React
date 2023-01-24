@@ -1,0 +1,14 @@
+.staffcontainer {
+	display: flex
+}
+
+svg {
+	width: 300px;
+}
+svg path {
+	cursor: pointer;
+}
+
+svg path:hover {
+	fill: #333;
+}

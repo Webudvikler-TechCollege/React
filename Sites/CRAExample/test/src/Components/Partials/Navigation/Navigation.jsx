@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
+import './Navigation.scss'
 
 const Navigation = () => {
 	return (
@@ -7,6 +8,8 @@ const Navigation = () => {
 				<li><NavLink to='/'>Home</NavLink></li>
 				<li><NavLink to='/about'>About</NavLink></li>
 				<li><NavLink to='/products'>Products</NavLink></li>
+				<li><NavLink to='/staff'>Staff</NavLink></li>
+				<li><NavLink to='/form'>Form Elements</NavLink></li>
 			</ul>			
 		</nav>
 	);
