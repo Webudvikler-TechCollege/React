@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+}
+
+form {
+  width: 40%;
+}
+
+form + div {
+  width: 60%;
+}
+
+form {
+	div {
+		label {
+			display: block
+		}
+	}
+}
