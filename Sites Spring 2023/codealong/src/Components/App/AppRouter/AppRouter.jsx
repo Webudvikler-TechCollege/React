@@ -4,6 +4,7 @@ import About from '../../Pages/About'
 import Products from '../../Pages/Products'
 import FormElements from "../Examples/FormElements";
 import { Staff, CityList } from "../../Pages/Staff/Staff";
+import { Counter } from "../Examples/useEffectExamples";
 
 const AppRouter = () => {
 	return (
@@ -11,6 +12,7 @@ const AppRouter = () => {
 			<Route index element={<Home />} />
 			<Route path="/about" element={<About />} />
 			<Route path="/products" element={<Products />} />
+			<Route path="/hooks" element={<Counter />} />
 			<Route path="/form" element={<FormElements /> } />
 			<Route path="/staff" element={<Staff />}>
 				<Route index element={<CityList />}></Route>
