@@ -1,3 +1,8 @@
+/**
+ * Index.js
+ * I kan placere overordnede komponenter som eksempelvis 
+ * browserrouter i denne fil - ligesom nedenstående eksempel 
+ */
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"

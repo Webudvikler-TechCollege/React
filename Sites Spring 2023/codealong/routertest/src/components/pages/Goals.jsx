@@ -1,38 +1,40 @@
-import { useEffect, useState } from "react";
-import axios from 'axios'
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react"; // Importerer hooks
+import { Link, useParams } from "react-router-dom" // Importerer router dom metoder
+import axios from 'axios' // Importer fetch metode
 
-const Goals = () => {
-	return (
-		<div>
-			<h1>De 17 verdensmål</h1>
-			<section><GoalList /></section>
-			<br /><br />
-		</div>
-	);
-}
-
+/**
+ * Komponent som henter liste af mål fra api
+ */
 const GoalList = () => {
+	// Hook med state var og function
 	const [ apiData, setApiData ] = useState([])
 
+	// useEffect til kontrol af rendering
 	useEffect(() => {
+		// Endpoint url
 		const url = `https://api.mediehuset.net/sdg/goals`
 		
+		// Asynkron funktion til fetch af data
 		const getData = async () => {
 			try {
+				// Venter og tildeler data til var result
 				const result = await axios.get(url)
+				// Tildeler array property til state var
 				setApiData(result.data.items)	
 			}
 			catch(err) {
 				console.error(err);
 			}
 		}
+		// Funktionskald
 		getData()
+		//Angiver state func i dependency array - køres dermed ved hvert render
 	}, [setApiData])
 
 	return (
 		<ul>
 			{
+				// Tjekker apiData eksisterer og mapper - indsætter link til detaljer
 				apiData && apiData.map(item => {
 					return (
 						<li key={item.id}>
@@ -76,4 +78,4 @@ const GoalDetails = () => {
 	)
 }
 
-export { Goals, GoalDetails };
+export { GoalList, GoalDetails };
