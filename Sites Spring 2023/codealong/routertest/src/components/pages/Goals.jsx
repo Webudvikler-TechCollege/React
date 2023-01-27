@@ -23,7 +23,7 @@ const GoalList = () => {
 				setApiData(result.data.items)	
 			}
 			catch(err) {
-				console.error(err);
+				console.error(`Fejl i kald af SDG liste: ${err}`);
 			}
 		}
 		// Funktionskald
@@ -63,10 +63,14 @@ const GoalDetails = () => {
 		
 		// Asynkron funktion til fetch af data
 		const getData = async () => {
-			// Venter og tildeler data til var result
-			const result = await axios.get(url)
-			// Tildeler objekt property til state var
-			setApiData(result.data.item);
+			try {
+				// Venter og tildeler data til var result
+				const result = await axios.get(url)
+				// Tildeler objekt property til state var
+				setApiData(result.data.item);
+			} catch(err) {
+				console.error(`Fejl i kald af SDG detaljer: ${err}`);
+			}
 		}
 		// Funktionskald
 		getData()
