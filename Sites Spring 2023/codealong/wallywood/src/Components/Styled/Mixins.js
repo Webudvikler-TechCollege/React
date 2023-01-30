@@ -11,5 +11,5 @@ export const Reset = `
 
 export const ClearList = `
 	list-style-type: none;
-	${Reset}	;	
+	${Reset};	
 `

@@ -6,6 +6,12 @@ export const NavBarPrimaryStyle = styled.nav`
 
 	ul {
 		display: flex;
+		align-content: flex-end;
+
 		${ClearList}
+
+		li {
+			margin-left: 20px;
+		}
 	}
 `
