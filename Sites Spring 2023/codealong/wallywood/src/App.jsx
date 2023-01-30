@@ -2,7 +2,7 @@ import { ContainerStyle } from './Components/Styled/Container.style'
 
 function App() {
   return (
-    <ContainerStyle>
+    <ContainerStyle bg="blue">
       sdfdfdf
     </ContainerStyle>
   );
