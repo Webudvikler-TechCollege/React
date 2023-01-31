@@ -1,4 +1,4 @@
-const PageHeader = (props) => {
+const ContentWrapper = (props) => {
   // Sætter page title	
   document.title = props.title
 
@@ -14,17 +14,9 @@ const PageHeader = (props) => {
 	  {props.subtitle && (
 		<h2>{props.subtitle}</h2>
 	  )}
-	  <ContentWrapper>{props.children}</ContentWrapper>
+	  <div>{props.children}</div>
     </>
   )
 }
 
-const ContentWrapper = props => {
-	return (
-		<div>
-			{props.children}
-		</div>
-	)
-}
-
-export { PageHeader }
+export { ContentWrapper }
