@@ -23,9 +23,9 @@ const Footer = () => {
 		<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
 			<g id="SoMe_Icon" data-name="SoMe Icon" transform="translate(1.5 1.5)">
 				<g id="Icon_feather-instagram" data-name="Icon feather-instagram" transform="translate(-3 -3)">
-				<path id="Path_1" data-name="Path 1" d="M10,3H24a7,7,0,0,1,7,7V24a7,7,0,0,1-7,7H10a7,7,0,0,1-7-7V10a7,7,0,0,1,7-7Z" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-				<path id="Path_2" data-name="Path 2" d="M24,17.055A6,6,0,1,1,18.945,12,6,6,0,0,1,24,17.055Z" transform="translate(-1.007 -0.993)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-				<path id="Path_3" data-name="Path 3" d="M26.25,9.75h0" transform="translate(-1.55 -0.45)" fill="none" stroke="#ccc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+				<path id="Path_1" data-name="Path 1" d="M10,3H24a7,7,0,0,1,7,7V24a7,7,0,0,1-7,7H10a7,7,0,0,1-7-7V10a7,7,0,0,1,7-7Z" fill="none" stroke="#ccc" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
+				<path id="Path_2" data-name="Path 2" d="M24,17.055A6,6,0,1,1,18.945,12,6,6,0,0,1,24,17.055Z" transform="translate(-1.007 -0.993)" fill="none" stroke="#ccc" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
+				<path id="Path_3" data-name="Path 3" d="M26.25,9.75h0" transform="translate(-1.55 -0.45)" fill="none" stroke="#ccc" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
 				</g>
 			</g>
 		</svg>
