@@ -6,6 +6,6 @@ export const ContainerStyle = styled.section`
 	height: 100vh;
 	max-width: ${props => props.maxwidth}px;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 1.0rem 2.3rem;
 `
 

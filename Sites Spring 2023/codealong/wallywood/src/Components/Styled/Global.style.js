@@ -4,6 +4,7 @@ import { Reset } from './Mixins'
 const GlobalStyle = createGlobalStyle`
 	* {
 		box-sizing: border-box;
+		font-family: ${props => props.theme.fonts[1]};
 	}
 
 	body {
