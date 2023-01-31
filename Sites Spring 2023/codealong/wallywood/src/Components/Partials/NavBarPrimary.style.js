@@ -3,7 +3,7 @@ import { ClearList } from '../Styled/Mixins'
 
 export const NavBarPrimaryStyle = styled.nav`
 	height: 100%;
-	margin-top: 2.4rem;
+	margin-top: 2.1rem;
 
 	ul {
 		display: flex;

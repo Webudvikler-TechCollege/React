@@ -6,13 +6,13 @@ export const HeaderStyle = styled.header`
 	justify-content: space-between;
 	border-bottom: solid 1px ${props => props.theme.colors.primary};
 
-	h1 {
+	> a {
 		font-family: ${props => props.theme.fonts[0]};
 		text-transform: uppercase;
 		color: ${props => props.theme.colors.secondary};
 		font-size: 3rem;
 		font-weight: 900;
+		text-decoration: none;
 		${ Reset }
 	}
-
 `

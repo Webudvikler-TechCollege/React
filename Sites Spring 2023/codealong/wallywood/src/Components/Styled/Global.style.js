@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 		color: ${props => props.theme.colors.secondary};
 		font-family: ${props => props.theme.fonts[0]};
 		font-size: 2.0rem;
+		margin-block: 0.8rem;
 	}
 `
 
