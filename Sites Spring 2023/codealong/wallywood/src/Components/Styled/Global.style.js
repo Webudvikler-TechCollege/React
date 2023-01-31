@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
 	* {
 		box-sizing: border-box;
 		font-family: ${props => props.theme.fonts[1]};
+		color: ${props => props.theme.colors.tertiary};
+		font-size: 0.98rem;
 	}
 
 	body {
