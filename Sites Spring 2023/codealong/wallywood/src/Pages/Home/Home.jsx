@@ -1,7 +1,11 @@
 import { ContentWrapper } from "../../Components/App/ContentWrapper/ContentWrapper"
 import SlideWrapper from "../../Components/App/SlideWrapper/SlideWrapper"
+import { usePosterData } from "../../Components/App/PosterList/PosterList"
 
 const Home = () => {
+	const { posterList } = usePosterData()
+	console.log(posterList);
+
   return (
 	<>
 		<SlideWrapper />
