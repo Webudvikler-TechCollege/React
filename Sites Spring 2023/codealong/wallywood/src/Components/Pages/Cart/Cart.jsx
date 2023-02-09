@@ -1,4 +1,4 @@
-import { ContentWrapper } from '../../Components/App/ContentWrapper/ContentWrapper'
+import { ContentWrapper } from '../../App/Elements/ContentWrapper/ContentWrapper'
 
 const Cart = () => {
 	return (

@@ -1,6 +1,6 @@
-import { ContentWrapper } from "../../Components/App/ContentWrapper/ContentWrapper"
-import SlideWrapper from "../../Components/App/SlideWrapper/SlideWrapper"
-import { useAuth } from "../../Components/App/Providers/AuthProvider"
+import { ContentWrapper } from '../../App/Elements/ContentWrapper/ContentWrapper'
+import SlideWrapper from "../../App/Elements/SlideWrapper/SlideWrapper"
+import { useAuth } from "../../App/Providers/AuthProvider"
 
 const Home = () => {
 	const { loginData } = useAuth()

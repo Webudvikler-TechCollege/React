@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ClearList } from '../../../Components/Styled/Mixins'
+import {ClearList} from '../../../Styled/Mixins'
 
 export const PosterNavsStyle = styled.nav`
 
