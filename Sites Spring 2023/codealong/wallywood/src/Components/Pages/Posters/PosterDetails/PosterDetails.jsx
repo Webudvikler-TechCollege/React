@@ -26,6 +26,7 @@ export const PosterDetails = () => {
         <h1>{data.name}</h1>
         <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
         <p>Mål: {data.width} x {data.height} cm</p>
+        <p>Varenummer: {data.id}</p>
         <p>Pris: {data.price} DKK</p>
         <p><button>Læg i kurv</button></p>
       </div>
