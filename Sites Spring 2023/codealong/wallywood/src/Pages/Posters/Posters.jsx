@@ -44,22 +44,23 @@ const GenreList = () => {
 
 const PosterList = () => {
   const [ data, setData ] = useState([])
-  const { slug } = useParams();
+  const { genre } = useParams();
 
   useEffect(() => {
     const getData = async () => {
-      const result = await axios.get(`http://localhost:4000/poster/${slug}`)
+      const endpoint = `http://localhost:4000/poster/list/${genre}`
+      const result = await axios.get(endpoint)
       setData(result.data);
     }
     getData()
-  }, [slug]);
+  }, [genre]);
 
   return (
     <ul>
       {data && data.map(poster => {
         return (
           <li key={poster.id}>
-            <Link to={`/posters/${slug}/${poster.id}`}>{poster.name}</Link>
+            <Link to={`/posters/details/${poster.slug}`}>{poster.name}</Link>
           </li>
         )
       })}
@@ -70,22 +71,27 @@ const PosterList = () => {
 
 const PosterDetails = () => {
   const [ data, setData ] = useState([])
-  const { id } = useParams();
+  const { poster } = useParams();
 
   useEffect(() => {
     const getData = async () => {
-      const result = await axios.get(`http://localhost:4000/poster/${id}`)
+      const endpoint = `http://localhost:4000/poster/details/${poster}`
+      const result = await axios.get(endpoint)
       setData(result.data);
     }
     getData()
-  }, [id]);
+  }, [poster]);
 
   return (
-    <ul>
-          <li>
-            Plakatdetaljer            
-          </li>
-    </ul>
+    <div>
+          {data && (
+            <>
+              <h2>{data.name}</h2>
+              <p dangerouslySetInnerHTML={{__html: data.description}}></p>
+              <img src={data.image} alt={data.name}></img>
+             </>
+          )}
+    </div>
   )
 
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <ContainerStyle maxwidth="1024">
       <Header />
-      <AppRouter />
+        <AppRouter />
       <Footer />
     </ContainerStyle>
   );

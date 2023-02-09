@@ -9,6 +9,7 @@ const NavBarPrimary = () => {
 				<li><NavLink to="/posters">PLAKATER</NavLink></li>
 				<li><NavLink to="/om_os">OM OS</NavLink></li>
 				<li><NavLink to="/kontakt">KONTAKT</NavLink></li>
+				<li><NavLink to="/cart">KURV</NavLink></li>
 				<li><NavLink to="/login">LOGIN</NavLink></li>
 			</ul>
 		</NavBarPrimaryStyle>
