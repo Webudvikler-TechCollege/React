@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const PostersStyle = styled.div`
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 
 	img {
 		width: 100%;

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { ContentWrapper } from "../../Components/App/ContentWrapper/ContentWrapper"
-import { useAuth } from "../../Components/Providers/AuthProvider"
+import { useAuth } from "../../Components/App/Providers/AuthProvider"
 
 const Login = () => {
   const { loginData, setLoginData } = useAuth()
