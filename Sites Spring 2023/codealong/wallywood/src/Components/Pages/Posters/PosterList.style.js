@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Reset} from '../../../Styled/Mixins'
+import {Reset} from '../../Styled/Mixins'
 
 export const PosterListStyle = styled.section`
 	display: grid;
