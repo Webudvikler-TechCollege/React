@@ -1,3 +1,8 @@
+/**
+ * CartProvider til state transport af data til indkøbskurv
+ * Bruges til at vise indkøbskurven, vareantal på ikon i toppen og 
+ * varer der allerede er tilføjet til kurven
+ */
 import { createContext, useContext, useEffect, useState } from "react"
 import axios from "axios"
 import { useAuth } from "./AuthProvider"
