@@ -21,6 +21,13 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 2.0rem;
 		margin-block: 0.8rem;
 	}
+
+	h2 {
+		color: ${props => props.theme.colors.tertiary};
+		font-family: ${props => props.theme.fonts[0]};
+		font-size: 1.5rem;
+		margin-block: 0rem;
+	}
 `
 
 

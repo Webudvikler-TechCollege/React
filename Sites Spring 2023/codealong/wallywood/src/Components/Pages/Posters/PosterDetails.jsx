@@ -23,7 +23,7 @@ export const PosterDetails = () => {
         </figure>
       </div>
       <div>
-        <h1>{data.name}</h1>
+        <h2>{data.name}</h2>
         <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
         <p>Mål: {data.width} x {data.height} cm</p>
         <p>Varenummer: {data.id}</p>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link, useParams } from "react-router-dom"
 import { PosterListStyle } from "./PosterList.style"
+import AddToCartButton from "../Cart/AddToCartButton"
 
 export const PosterList = () => {
   const [data, setData] = useState([])
@@ -34,7 +35,7 @@ export const PosterList = () => {
               </p>
               <p>DKK {poster.price},00</p>
               <p>
-                <button>Tilføj kurv</button>
+                <AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton>
               </p>
             </div>
           )

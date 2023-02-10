@@ -6,7 +6,8 @@ import Footer from './Components/Partials/Footer';
 function App() {
   return (
     <ContainerStyle maxwidth="1024">
-      <Header />
+      <Header>
+      </Header>
         <AppRouter />
       <Footer />
     </ContainerStyle>

@@ -6,6 +6,7 @@ import { theme } from "./Components/Styled/Theme"
 import { GlobalStyle } from "./Components/Styled/Global.style"
 import { BrowserRouter } from "react-router-dom"
 import { AuthProvider } from "./Components/App/Providers/AuthProvider"
+import { CartProvider } from "./Components/App/Providers/CartProvider"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
@@ -15,10 +16,13 @@ root.render(
       {/* Theme Provider for style values */}
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* BrowserRouter for route handling */}
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        {/* Cart Provider */}
+        <CartProvider>
+          {/* BrowserRouter for route handling */}
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </CartProvider>
       </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>

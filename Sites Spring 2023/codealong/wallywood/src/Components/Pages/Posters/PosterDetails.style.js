@@ -1,10 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components"
+import { Reset } from "../../Styled/Mixins"
 
 export const PosterDetailsStyle = styled.div`
-	display: flex;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
 
-	img {
-		width: 100%;
-		max-width: 250px;
-	}
+  figure {
+    ${Reset}
+
+    img {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
 `

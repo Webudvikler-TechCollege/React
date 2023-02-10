@@ -12,7 +12,7 @@ const Login = () => {
     const endpoint = `http://localhost:4000/login`
     try {
       const result = await axios.post(endpoint, formdata)
-      handleSessionData(result.data.access_token)
+      handleSessionData(result.data)
     } catch (err) {
       console.error(`Kunne ikke logge ind: ${err}`)
     }
@@ -50,7 +50,7 @@ const Login = () => {
         </form>
       ) : (
         <div>
-			<p>Du er logget ind</p>
+			<p>Du er logget ind som {`${loginData.firstname} ${loginData.lastname} `}</p>
 			<button onClick={() => Logout()}>Log ud</button>
 		</div>
       )}
