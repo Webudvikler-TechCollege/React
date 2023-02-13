@@ -1,47 +1,48 @@
-/**
- * CartProvider til state transport af data til indkøbskurv
- * Bruges til at vise indkøbskurven, vareantal på ikon i toppen og 
- * varer der allerede er tilføjet til kurven
- */
-import { createContext, useContext, useEffect, useState } from "react"
-import axios from "axios"
-import { useAuth } from "./AuthProvider"
+import axios from "axios";
+import { useState } from "react";
+import { useContext } from "react";
+import { useEffect } from "react";
+import { createContext } from "react";
+import { useAuth } from "./AuthProvider";
 
 const CartContext = createContext()
 
-const CartProvider = ({ children }) => {
-  const [cartData, setCartData] = useState([])
-  const { loginData } = useAuth()
+const CartProvider = ({children}) => {
+	const [ cartItems, setCartItems ] = useState([])
+	const { loginData } = useAuth()
 
-  useEffect(() => {
-    const getData = async () => {
-      const options = {
-        headers: {
-          Authorization: `Bearer ${loginData.access_token}`
-        }
-      }
+	useEffect(() => {
+		const getData = async () => {
+			const options = {
+				headers: {
+					Authorization: `Bearer ${loginData.access_token}`
+				}
+			}
 
-      const endpoint = `http://localhost:4000/cart`
-      try {
-        if(loginData && loginData.access_token) {
-          const result = await axios.get(endpoint, options)
-          setCartData(result.data)
-        }
-      } catch (err) {
-        console.error(`Fejl i kald af cart: ${err}`)
-      }
-    }
+			const endpoint = `http://localhost:4000/cart`
 
-    getData()
-  }, [children, loginData])
+			try {
+				if(loginData && loginData.access_token) {
+					const result = await axios.get(endpoint, options)
+					setCartItems(result.data)
+				}
 
-  return (
-    <CartContext.Provider value={{ cartData, setCartData }}>
-      {children}
-    </CartContext.Provider>
-  )
+			} catch(err) {
+				console.error(`Fejl i kald af cart liste: ${err}`);
+			}
+
+		}
+		getData()
+	}, [children, loginData]);
+
+
+	return (
+		<CartContext.Provider value={{ cartItems, setCartItems }}>
+			{children}
+		</CartContext.Provider>
+	)
 }
 
-const useCartData = () => useContext(CartContext)
+const useCartItems = () => useContext(CartContext)
 
-export { CartProvider, useCartData }
+export { CartProvider, useCartItems }

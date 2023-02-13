@@ -13,17 +13,16 @@ root.render(
   <React.StrictMode>
     {/* Auth Provider for login data */}
     <AuthProvider>
-      {/* Theme Provider for style values */}
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        {/* Cart Provider */}
-        <CartProvider>
+      <CartProvider>
+        {/* Theme Provider for style values */}
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
           {/* BrowserRouter for route handling */}
           <BrowserRouter>
             <App />
           </BrowserRouter>
-        </CartProvider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </CartProvider>
     </AuthProvider>
   </React.StrictMode>
 )

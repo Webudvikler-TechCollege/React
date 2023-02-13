@@ -1,11 +1,11 @@
-import { ContentWrapper } from '../../App/Elements/ContentWrapper/ContentWrapper'
+import CartList from "../../App/Cart/CartList";
+import { ContentWrapper } from "../../App/Elements/ContentWrapper/ContentWrapper";
 
-const Cart = () => {
+export const Cart = () => {
 	return (
 		<ContentWrapper title="Indkøbskurv">
-			
+			<CartList />
 		</ContentWrapper>
+
 	);
 }
-
-export default Cart;
