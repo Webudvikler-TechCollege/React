@@ -26,7 +26,9 @@ export const PosterListStyle = styled.section`
 		}
 
 		p span {
-			font-size: ${props => props.theme.fontsizes.xs}
+			font-size: ${props => props.theme.fontsizes.xs};
+			color: ${props => props.theme.colors.primary};
+
 		}
 	}
 `

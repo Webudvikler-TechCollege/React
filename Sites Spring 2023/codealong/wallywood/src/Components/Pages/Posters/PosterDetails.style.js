@@ -13,4 +13,9 @@ export const PosterDetailsStyle = styled.div`
       max-width: 250px;
     }
   }
+
+  p span {
+			font-size: ${props => props.theme.fontsizes.xs};
+      color: ${props => props.theme.colors.primary}
+	}  
 `
