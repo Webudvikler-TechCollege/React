@@ -3,9 +3,11 @@ import axios from "axios"
 import { Link, useParams } from "react-router-dom"
 import { PosterListStyle } from "./PosterList.style"
 import AddToCartButton from "../../App/Cart/AddToCartButton"
+import { useCartItems } from "../../App/Providers/CartProvider"
 
 export const PosterList = () => {
   const [data, setData] = useState([])
+  const { cartItems } = useCartItems()
   const { genre } = useParams()
 
   useEffect(() => {
@@ -33,8 +35,13 @@ export const PosterList = () => {
                   {poster.name}
                 </Link>
               </p>
-              <p>DKK {poster.price},00</p>
-              <p><AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton></p>
+              <p>DKK {poster.price},00</p>              
+              <p>
+                {cartItems.find(x => x.poster.id === poster.id) ? 
+                  (<span>Denne vare ligger i kurven</span>) : 
+                  (<AddToCartButton id={poster.id}>Læg i kurv</AddToCartButton>)
+                }
+              </p>
             </div>
           )
         })}

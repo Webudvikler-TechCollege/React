@@ -24,5 +24,9 @@ export const PosterListStyle = styled.section`
 			font-size: 0.9rem;
 			font-weight: bold;
 		}
+
+		p span {
+			font-size: ${props => props.theme.fontsizes.xs}
+		}
 	}
 `

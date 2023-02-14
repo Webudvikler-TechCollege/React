@@ -9,5 +9,12 @@ export const theme = {
 		dark: "#000",
 		light: "#fff"
 	},
-	fonts: ['Titillium Web', 'Open Sans']
+	fonts: ['Titillium Web', 'Open Sans'],
+	fontsizes: {
+		xs: '0.8rem',
+		s: '0.9rem',
+		m: '1rem',
+		l: '1.1rem',
+		xl: '1.5rem'
+	},
 }
