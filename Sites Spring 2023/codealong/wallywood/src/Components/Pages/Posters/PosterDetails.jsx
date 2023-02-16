@@ -34,10 +34,10 @@ export const PosterDetails = () => {
           Mål: {data.width} x {data.height} cm
         </p>
         <p>Varenummer: {data.id}</p>
-        <p>Pris: {data.price} DKK</p>
+        <p>Pris: {data.price},00 DKK</p>
         <p>
-          {cartItems.find((x) => x.poster.id === data.id) ? (
-            <span>Denne vare ligger i kurven</span>
+          {cartItems.find(x => x.poster.id === data.id) ? (
+            <span>Denne vare ligger allerede i kurven</span>
           ) : (
             <AddToCartButton id={data.id}>Læg i kurv</AddToCartButton>
           )}

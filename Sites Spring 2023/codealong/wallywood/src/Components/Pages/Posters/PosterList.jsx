@@ -8,7 +8,7 @@ import { useCartItems } from "../../App/Providers/CartProvider"
 export const PosterList = () => {
   const [data, setData] = useState([])
   const { cartItems } = useCartItems()
-  const { genre } = useParams()
+  let { genre } = useParams({ genre: 'drama' })
 
   useEffect(() => {
     const getData = async () => {
