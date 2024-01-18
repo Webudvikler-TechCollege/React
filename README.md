@@ -1,2 +1,0 @@
-# React
-Undervisningsmateriale til React
