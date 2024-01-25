@@ -1,12 +1,10 @@
-<link rel="stylesheet" type="text/css" href="test.css">
-
 # Project Schedule
 
 Week | Monday | Tuesday |	Wednesday | Thursday | Friday | Saturday | Sunday 
 -- | -- | -- | -- | -- | -- | -- | --
-<span>1</span>ONLINE | <span>26/02</span><br />Design Sprint | <span>27/02</span>Design Sprint | <span>28/02</span>Design Sprint |<span>29/02</span>Design Sprint |	<span>01/03</span>Design Sprint | <span>02/03</span>Free | <span> 03/03</span>Departure
-<span>2</span>LAS PALMAS | <span>04/03</span>Breakfast & Icebreaking @ El Rincon | <span>05/03</span>Project Work | <span>06/03</span>Project Work | <span>07/03</span>Project Work | <span>08/03</span>Project Work | <span>09/03</span>Common Activity | <span>10/03</span>Free
-<span>3</span>LAS PALMAS | <span>11/03</span>Project Work | <span>12/03</span>Project Work | <span>13/03</span>Project Work | <span>14/03</span>Project Work | <span>15/03</span>Presentation | <span>16/03</span>Free / Departure | <span>17/03</span>Free / Departure
+1<br />ONLINE | 26/02<br />Design Sprint | 27/02<br />Design Sprint | 28/02<br />Design Sprint |29/02<br />Design Sprint |	01/03<br />Design Sprint | 02/03<br />Free |  03/03<br />Departure
+2<br />LAS PALMAS | 04/03<br />Breakfast & Icebreaking @ El Rincon | 05/03<br />Project Work | 06/03<br />Project Work | 07/03<br />Project Work | 08/03<br />Project Work | 09/03<br />Common Activity | 10/03<br />Free
+3<br />LAS PALMAS | 11/03<br />Project Work | 12/03<br />Project Work | 13/03<br />Project Work | 14/03<br />Project Work | 15/03<br />Presentation | 16/03<br />Free / Departure | 17/03<br />Free / Departure
 
 ## Planning Project in March - Day 1
 
