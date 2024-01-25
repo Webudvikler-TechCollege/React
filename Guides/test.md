@@ -2,7 +2,7 @@
 
 Week<br />___________ | Monday<br />___________ | Tuesday<br />___________ | Wednesday<br />___________ | Thursday<br />___________ | Friday<br />___________ | Saturday<br />___________ | Sunday<br />___________ 
 -- | -- | -- | -- | -- | -- | -- | --
-ONLINE | 26/02<br />Design Sprint | 27/02<br />Design Sprint | 28/02<br />Design Sprint |29/02<br />Design Sprint |	01/03<br />Design Sprint | 02/03<br />Get packed |  03/03<br />Departure
+ONLINE | `26/02`<br />Design Sprint | 27/02<br />Design Sprint | 28/02<br />Design Sprint |29/02<br />Design Sprint |	01/03<br />Design Sprint | 02/03<br />Get packed |  03/03<br />Departure
 LAS PALMAS | 04/03<br />Meetup | 05/03<br />Project Work | 06/03<br />Project Work | 07/03<br />Project Work | 08/03<br />Project Work | 09/03<br />Activity | 10/03<br />Free
 LAS PALMAS | 11/03<br />Project Work | 12/03<br />Project Work | 13/03<br />Project Work | 14/03<br />Project Work | 15/03<br />Presentation | 16/03<br />Departure | 17/03<br />Departure
 
