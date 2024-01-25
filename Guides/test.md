@@ -4,7 +4,7 @@
 
 Week | Monday | Tuesday |	Wednesday | Thursday | Friday | Saturday | Sunday 
 -- | -- | -- | -- | -- | -- | -- | --
-<span>1</span>ONLINE | <span>26/02</span>Design Sprint | <span>27/02</span>Design Sprint | <span>28/02</span>Design Sprint |<span>29/02</span>Design Sprint |	<span>01/03</span>Design Sprint | <span>02/03</span>Free | <span> 03/03</span>Departure
+<span>1</span>ONLINE | <span>26/02</span><br />Design Sprint | <span>27/02</span>Design Sprint | <span>28/02</span>Design Sprint |<span>29/02</span>Design Sprint |	<span>01/03</span>Design Sprint | <span>02/03</span>Free | <span> 03/03</span>Departure
 <span>2</span>LAS PALMAS | <span>04/03</span>Breakfast & Icebreaking @ El Rincon | <span>05/03</span>Project Work | <span>06/03</span>Project Work | <span>07/03</span>Project Work | <span>08/03</span>Project Work | <span>09/03</span>Common Activity | <span>10/03</span>Free
 <span>3</span>LAS PALMAS | <span>11/03</span>Project Work | <span>12/03</span>Project Work | <span>13/03</span>Project Work | <span>14/03</span>Project Work | <span>15/03</span>Presentation | <span>16/03</span>Free / Departure | <span>17/03</span>Free / Departure
 
