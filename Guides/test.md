@@ -1,6 +1,6 @@
 # Project Schedule
 
-Week<br />____________ | Monday<br />____________ | Tuesday<br />____________ | Wednesday<br />____________ | Thursday<br />____________ | Friday<br />____________ | Saturday<br />____________ | Sunday<br />____________ 
+Week<br />___________ | Monday<br />___________ | Tuesday<br />___________ | Wednesday<br />___________ | Thursday<br />___________ | Friday<br />___________ | Saturday<br />___________ | Sunday<br />___________ 
 -- | -- | -- | -- | -- | -- | -- | --
 ONLINE | 26/02<br />Design Sprint | 27/02<br />Design Sprint | 28/02<br />Design Sprint |29/02<br />Design Sprint |	01/03<br />Design Sprint | 02/03<br />Get packed |  03/03<br />Departure
 LAS PALMAS | 04/03<br />Meetup | 05/03<br />Project Work | 06/03<br />Project Work | 07/03<br />Project Work | 08/03<br />Project Work | 09/03<br />Common Activity | 10/03<br />Free
