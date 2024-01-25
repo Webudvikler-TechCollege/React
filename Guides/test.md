@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./test.css">
+<link rel="stylesheet" href="test.css">
 
 # Project Schedule
 
